@@ -1,0 +1,12 @@
+<h1>Dating App</h1>
+
+<h2>Current Users:</h2>
+<ul>
+  <li *ngFor="let user of users">{{user.userName}}</li>
+</ul>
+
+<ul>
+@for (user of users; track user.id){
+  <li>{{user.userName}}</li>
+}
+</ul>
