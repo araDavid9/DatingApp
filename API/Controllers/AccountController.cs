@@ -22,7 +22,7 @@ public class AccountController : BaseApiController
     [HttpPost("Register")]
     public async Task<ActionResult<UserDto>> Register(RegisterDto i_regDto)
     {
-        ActionResult returnState = BadRequest("User name already exsits!");
+        ActionResult returnState = BadRequest("User name already exists!");
         
         if (! await isUserNameExists(i_regDto.UserName))
         {
@@ -49,7 +49,7 @@ public class AccountController : BaseApiController
     }
 
     
-    [HttpGet("Login")]
+    [HttpPost("Login")] // ..../Account/Login
     public async Task<ActionResult<UserDto>> Login(LoginDto i_LogDto)
     {
         ActionResult returnState = Unauthorized("Wrong UserName");

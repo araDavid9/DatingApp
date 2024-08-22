@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+.purpButt{
+  border-color: #6f42c1;
+  color:#6f42c1;
+}
+
+.purpButt:hover{
+  background: #6f42c1;
+  color: rgb(34,37,41);
+  border-color:rgb(34,37,41) ;
+}
+
+.fullPurpleButton{
+  background: #6f42c1;
+  color:white;
+}
+.fullPurpleButton:hover{
+  border-color: #6f42c1;
+  color:#6f42c1 ;
+}

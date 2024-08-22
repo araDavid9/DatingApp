@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  @if (!this.registerMode)
+  {
+    <div style="text-align: center">
+      <h1>Find Matches!!!</h1>
+      <p class ="lead">Come on and find you matches!!.. all you need is to sign up!</p>
+      <div class="text-center">
+        <button class="btn btn-lg purpButt me-2" (click)="registerModeOn()">Register</button>
+        <button class="btn btn-lg fullPurpleButton me-2">Learn more</button>
+      </div>
+    </div>
+  }
+  @else
+  {
+    <div class="container">
+       <div class="row justify-content-center">
+         <div class="col-4">
+          <app-register
+            [usersFromHomeComponent]="this.users"
+            (cancelRegister)="cancelRegisterMode($event)"
+          />
+         </div>
+       </div>
+    </div>
+  }
+</div>
